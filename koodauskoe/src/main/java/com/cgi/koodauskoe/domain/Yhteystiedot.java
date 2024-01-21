@@ -10,12 +10,4 @@ import lombok.NoArgsConstructor;
 public class Yhteystiedot {
     private String email;
     private int puhnmr;
-
-    public String getEmail() {
-        return email;
-    }
-
-    public int getPuhnmr() {
-        return puhnmr;
-    }
 }
