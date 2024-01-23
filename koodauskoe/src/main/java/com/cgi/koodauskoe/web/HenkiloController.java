@@ -13,16 +13,25 @@ public class HenkiloController {
     @Autowired
     private HenkiloService henkiloService;
 
+    // Henkilön lisäys
     @PostMapping
     public void luoHenkilo(@RequestBody Henkilo henkilo) {
         henkiloService.lisaaHenkilo(henkilo);
     }
 
+    // Henkilön poisto
+    @DeleteMapping("/{id}")
+    public void poistaHenkilo(@PathVariable Long id) {
+        henkiloService.poistaHenkilo(id);
+    }
+
+    // Listaus
     @GetMapping
     public List<Henkilo> tuoHenkilot() {
         return henkiloService.tuoHenkilot();
     }
 
+    // Haetaan id:n perusteella
     @GetMapping("/{id}")
     public Henkilo tuoHenkiloById(@PathVariable Long id) {
         return henkiloService.tuoHenkiloById(id);

@@ -50,10 +50,15 @@ function App() {
         {henkilot.map((henkilo) => (
           <ListItem key={henkilo.id}>
           <ListItemText
-            primary={
-              `${henkilo.etunimi} ${henkilo.sukunimi} ${henkilo.syntymaaika} ${henkilo.hetu ? henkilo.hetu.hetu : ''}`
-              + ` ${henkilo.osoite ? henkilo.osoite.osoite : ''} ${henkilo.yhteystiedot ? henkilo.yhteystiedot.email : ''}`
+            /*primary={
+               `${henkilo.etunimi} ${henkilo.sukunimi} ${henkilo.syntymaaika} ${henkilo.hetu ? henkilo.hetu.hetu : ''}`
+              + `${henkilo.osoite ? henkilo.osoite.katuosoite : ''} ${henkilo.osoite ? henkilo.osoite.postinumero : ''} ${henkilo.osoite ? henkilo.osoite.kaupunki : ''}` 
+              + `${henkilo.yhteystiedot ? henkilo.yhteystiedot.email : ''}`
               + ` ${henkilo.yhteystiedot ? henkilo.yhteystiedot.puhnmr : ''}`
+            } */
+            primary={
+              `${henkilo.etunimi} ${henkilo.sukunimi} ${henkilo.syntymaaika} ${henkilo.hetu ? henkilo.hetu.hetu : ''} `
+             + `${henkilo.katuosoite} ${henkilo.postinumero} ${henkilo.kaupunki} ${henkilo.email} ${henkilo.puhnmr}`
             }
           />
         </ListItem>

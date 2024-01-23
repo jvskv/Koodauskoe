@@ -1,6 +1,8 @@
 package com.cgi.koodauskoe.web;
 
 import com.cgi.koodauskoe.domain.Henkilo;
+import com.cgi.koodauskoe.domain.Osoite;
+import com.cgi.koodauskoe.domain.Yhteystiedot;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -15,6 +17,10 @@ public class HenkiloService {
         Long id = currentId++;
         henkilo.setId(id);
         henkilot.put(id, henkilo);
+    }
+
+    public void poistaHenkilo(Long id) {
+        henkilot.remove(id);
     }
 
     public List<Henkilo> tuoHenkilot() {

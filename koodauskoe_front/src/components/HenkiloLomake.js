@@ -10,7 +10,7 @@ const HenkiloLomake = ({ submitHenkilo }) => {
     const [postinumero, setPostinumero] = useState('');
     const [kaupunki, setKaupunki] = useState('');
     const [email, setEmail] = useState('');
-    const [puhelinnumero, setPuhelinnumero] = useState('');
+    const [puhnmr, setPuhnmr] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,8 +24,9 @@ const HenkiloLomake = ({ submitHenkilo }) => {
         postinumero,
         kaupunki,
         email,
-        puhelinnumero
+        puhnmr
     };
+
 
     submitHenkilo(henkilo);
 
@@ -37,8 +38,10 @@ const HenkiloLomake = ({ submitHenkilo }) => {
     setPostinumero('');
     setKaupunki('');
     setEmail('');
-    setPuhelinnumero('');
+    setPuhnmr('');
+
 }
+
   return (
     <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
@@ -122,8 +125,8 @@ const HenkiloLomake = ({ submitHenkilo }) => {
                 label="Puhelinnumero"
                 variant="outlined"
                 fullWidth
-                value={puhelinnumero}
-                onChange={(e) => setPuhelinnumero(e.target.value)}/>
+                value={puhnmr}
+                onChange={(e) => setPuhnmr(e.target.value)}/>
             </Grid>
             <Grid item xs={12}>
                 <Button type="submit" variant="contained" color="primary">
